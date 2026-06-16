@@ -2,7 +2,7 @@
 
 A Machine Learning-based web application that predicts the likelihood of heart disease using patient health information. The application is built with **Streamlit** and uses a trained **Naive Bayes Pipeline** for prediction.
 
-## 🚀 Features
+## Features
 
 * Predict heart disease risk instantly
 * User-friendly Streamlit interface
@@ -26,13 +26,13 @@ The model uses the following information:
 * Oldpeak (ST Depression)
 * ST Slope
 
-## 🤖 Model
+## Model
 
 The application uses a **Naive Bayes Classifier** trained on a heart disease dataset.
 
 The deployed model is saved as a Scikit-learn Pipeline that automatically handles preprocessing and prediction.
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 .
@@ -42,7 +42,7 @@ The deployed model is saved as a Scikit-learn Pipeline that automatically handle
 └── README.md
 ```
 
-## 🛠️ Installation
+##  Installation
 
 ### Clone the repository
 
@@ -57,7 +57,7 @@ cd heart-disease-prediction
 pip install streamlit pandas scikit-learn joblib
 ```
 
-## ▶️ Run the Application
+##  Run the Application
 
 ```bash
 streamlit run app.py
@@ -77,6 +77,4 @@ The model provides:
 
 This project is intended for educational and learning purposes only. It is not a medical diagnostic tool and should not replace professional medical advice.
 
-## 👩‍💻 Author
 
-Developed as a Machine Learning project using Python, Scikit-learn, and Streamlit.
