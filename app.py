@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load ONLY pipeline and columns
-pipe = joblib.load("model_NB_pipeline.pkl")
+pipe = joblib.load("best_model.pkl")
 expected_columns = joblib.load("columns.pkl")
 
 st.title("Heart Disease Prediction")
