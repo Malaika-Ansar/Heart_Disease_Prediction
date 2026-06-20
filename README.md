@@ -1,18 +1,26 @@
-# ❤️ Heart Disease Prediction App
+# ❤️ Heart Disease Risk Prediction using Machine Learning
 
-A Machine Learning-based web application that predicts the likelihood of heart disease using patient health information. The application is built with **Streamlit** and uses a trained **Naive Bayes Pipeline** for prediction.
+## Overview
 
-## Features
+This project uses Machine Learning to predict the likelihood of heart disease based on a patient's medical information. The application helps assess heart disease risk by analyzing various health indicators and providing a prediction along with confidence probabilities.
 
-* Predict heart disease risk instantly
-* User-friendly Streamlit interface
-* Automatic preprocessing through a Scikit-learn Pipeline
-* Displays prediction probabilities
-* Uses multiple health indicators for assessment
+A user-friendly Streamlit web application has been developed to allow users to enter their health information and receive instant predictions.
 
-## 📊 Input Features
+---
 
-The model uses the following information:
+## Problem Statement
+
+Heart disease is one of the leading causes of death worldwide. Early identification of high-risk patients can help healthcare professionals take preventive measures and improve patient outcomes.
+
+The objective of this project is to build a machine learning model capable of predicting whether a patient is at risk of heart disease using clinical and demographic data.
+
+---
+
+## Dataset
+
+**Heart Disease Prediction Dataset**
+
+The dataset contains patient information including:
 
 * Age
 * Sex
@@ -20,58 +28,155 @@ The model uses the following information:
 * Resting Blood Pressure
 * Cholesterol
 * Fasting Blood Sugar
-* Resting ECG Results
+* Resting ECG
 * Maximum Heart Rate
 * Exercise-Induced Angina
-* Oldpeak (ST Depression)
+* Oldpeak
 * ST Slope
 
-## Model
+**Target Variable**
 
-The application uses a **Naive Bayes Classifier** trained on a heart disease dataset.
+* 0 → No Heart Disease
+* 1 → Heart Disease
 
-The deployed model is saved as a Scikit-learn Pipeline that automatically handles preprocessing and prediction.
+---
 
-##  Project Structure
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Streamlit
+* Joblib
+
+---
+
+## Machine Learning Workflow
+
+### 1. Data Preprocessing
+
+* Handled categorical variables using One-Hot Encoding
+* Feature scaling using StandardScaler
+* Train-test split for model evaluation
+
+### 2. Model Training
+
+The following supervised learning algorithms were evaluated:
+
+* Logistic Regression
+* K-Nearest Neighbors (KNN)
+* Naive Bayes
+* Decision Tree
+* Support Vector Machine (SVM)
+
+### 3. Model Selection
+
+Models were compared using performance metrics such as:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* ROC-AUC Score
+
+The best-performing model was selected and saved as a machine learning pipeline.
+
+---
+
+## Streamlit Application Features
+
+* Interactive user interface
+* Medical parameter input forms
+* Real-time prediction
+* Probability scores for both classes
+* Heart disease risk assessment
+* Integrated preprocessing pipeline
+
+---
+
+## Project Structure
 
 ```text
-.
+Heart_Disease_Prediction/
+│
 ├── app.py
-├── model_NB_pipeline.pkl
-├── columns.pkl
+├── best_model.pkl
+├── columns1.pkl
+├── heartpro.ipynb
 └── README.md
 ```
 
-##  Installation
+---
 
-### Clone the repository
+## Installation
 
-```bash
-git clone https://github.com/your-username/heart-disease-prediction.git
-cd heart-disease-prediction
-```
-
-### Install dependencies
+Clone the repository:
 
 ```bash
-pip install streamlit pandas scikit-learn joblib
+git clone https://github.com/Malaika-Ansar/Heart_Disease_Prediction.git
 ```
 
-##  Run the Application
+Move into the project directory:
+
+```bash
+cd Heart_Disease_Prediction
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-The application will start locally and open in your browser.
+---
 
-## 📈 Prediction Output
+## Example Prediction Output
 
-The model provides:
+The application provides:
 
-* Probability of Heart Disease
-* Probability of No Heart Disease
+* Heart Disease Probability (%)
+* No Heart Disease Probability (%)
 * Final Risk Assessment
+
+Example:
+
+```text
+Heart Disease Probability: 82.4%
+
+Prediction:
+⚠️ High Risk of Heart Disease
+```
+
+---
+
+## Future Improvements
+
+* Hyperparameter tuning using GridSearchCV
+* Random Forest implementation
+* XGBoost implementation
+* Cross-validation analysis
+* SHAP explainability visualizations
+* Feature importance analysis
+* Cloud deployment
+
+---
+
+## Author
+
+**Malaika Ansar**
+
+Machine Learning Enthusiast | Software Engineering Student
+
+GitHub: https://github.com/Malaika-Ansar
 
 ## ⚠️ Disclaimer
 
